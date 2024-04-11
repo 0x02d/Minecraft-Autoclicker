@@ -43,7 +43,7 @@ void clicker::ClickThread() {
 void clicker::blockhitThread() {
 
 	while (gui::running == true) {
-		if (GetAsyncKeyState(VK_HOME)) {
+		if (GetAsyncKeyState(VK_INSERT)) {
 			globals::bhToggle = !globals::bhToggle;
 			Sleep(100);
 		}
@@ -131,7 +131,7 @@ int clicker::jittery(int lower, int upper) {
 void clicker::jitterThread() {
 	while (gui::running == true) {
 		
-		if (GetAsyncKeyState(VK_INSERT)) {
+		if (GetAsyncKeyState(VK_HOME)) {
 			globals::jToggle = !globals::jToggle;
 			Sleep(100);
 		}
